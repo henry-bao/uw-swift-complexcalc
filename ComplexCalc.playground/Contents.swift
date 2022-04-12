@@ -56,11 +56,7 @@ class Calculator {
         return op(lhs, rhs)
     }
     func mathOp(args: [Int], beg: Int, op: (Int, Int) -> Int) -> Int {
-        var res = beg
-        for num in args {
-            res = op(res, num)
-        }
-        return res
+        return args.reduce(beg, op)
     }
 
     /* * * * *
